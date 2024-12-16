@@ -14,6 +14,11 @@ namespace BidCalculationTool_API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] BidRequest bidRequest)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             Bid bid;
             if(bidRequest.BidType == "common")
             {
