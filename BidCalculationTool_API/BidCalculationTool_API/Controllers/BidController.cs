@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BidCalculationTool_API.Models;
+using BidCalculationTool_API.Requests;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,18 +10,27 @@ namespace BidCalculationTool_API.Controllers
     [ApiController]
     public class BidController : ControllerBase
     {
-        // GET: api/<BidController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        // POST api/<BidController>
+        [HttpPost]
+        public IActionResult Post([FromBody] BidRequest bidRequest)
         {
-            return new string[] { "value1", "value2" };
-        }
+            Bid bid;
+            if(bidRequest.BidType == "common")
+            {
+                bid = new CommonVehicleBid(bidRequest.BasePrice);
+            }
+            else if(bidRequest.BidType == "luxury")
+            {
+                bid = new LuxuryVehicleBid(bidRequest.BasePrice);
+            }
+            else
+            {
+                return BadRequest("The type of the bid must be Common or Luxury");
+            }
 
-        // GET api/<BidController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+            BidModel response = bid.getBidModel();
+
+            return Ok(response);
         }
     }
 }
