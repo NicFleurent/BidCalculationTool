@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidCalculationTool_API", "BidCalculationTool_API\BidCalculationTool_API.csproj", "{05F122F5-D582-4E75-B79F-DB30174A9013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05F122F5-D582-4E75-B79F-DB30174A9013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F122F5-D582-4E75-B79F-DB30174A9013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F122F5-D582-4E75-B79F-DB30174A9013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F122F5-D582-4E75-B79F-DB30174A9013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {724008B4-9964-4695-8CB1-17E79A39ADAC}
+	EndGlobalSection
+EndGlobal
