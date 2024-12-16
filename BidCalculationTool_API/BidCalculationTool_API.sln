@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidCalculationTool_API", "BidCalculationTool_API\BidCalculationTool_API.csproj", "{05F122F5-D582-4E75-B79F-DB30174A9013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BidCalculationTool_API", "BidCalculationTool_API\BidCalculationTool_API.csproj", "{05F122F5-D582-4E75-B79F-DB30174A9013}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidCalculationTool_API.tests", "BidCalculationTool_API.tests\BidCalculationTool_API.tests.csproj", "{6F176B3F-3E56-4C01-9F03-79F03918B74E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{05F122F5-D582-4E75-B79F-DB30174A9013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05F122F5-D582-4E75-B79F-DB30174A9013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F122F5-D582-4E75-B79F-DB30174A9013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F176B3F-3E56-4C01-9F03-79F03918B74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F176B3F-3E56-4C01-9F03-79F03918B74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F176B3F-3E56-4C01-9F03-79F03918B74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F176B3F-3E56-4C01-9F03-79F03918B74E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
