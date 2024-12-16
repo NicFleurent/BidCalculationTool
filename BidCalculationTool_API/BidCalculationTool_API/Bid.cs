@@ -11,6 +11,9 @@ namespace BidCalculationTool_API
         private const double STORAGE_FEE = 100.0;
 
         protected double basePrice;
+        protected double minimumBasicFee;
+        protected double maximumBasicFee;
+        protected double specialFeeRate;
 
         public Bid(double _basePrice)
         {
@@ -51,12 +54,23 @@ namespace BidCalculationTool_API
             return totalPrice;
         }
 
-        public virtual double calculateBasicFee()
+        public double calculateBasicFee()
         {
             double basicFee = basePrice * BASIC_FEE_RATE;
+
+            if (basicFee < minimumBasicFee)
+                basicFee = minimumBasicFee;
+            else if (basicFee > maximumBasicFee)
+                basicFee = maximumBasicFee;
+
             return basicFee;
         }
-        public abstract double calculateSpecialFee();
+
+        public double calculateSpecialFee()
+        {
+            double specialFee = basePrice * specialFeeRate;
+            return specialFee;
+        }
 
         public double getAssociationFee()
         {
