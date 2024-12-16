@@ -63,7 +63,8 @@ import "bootstrap"
       return {
         bid: null,
         isLoading: false,
-        error: null
+        error: null,
+        baseURL: "https://localhost:7277"
       };
     },
     methods: {
@@ -92,7 +93,7 @@ import "bootstrap"
         this.error = null;
 
         try {
-          const response = await fetch("https://localhost:7277/Bid", {
+          const response = await fetch(this.baseURL + "/Bid", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
