@@ -55,13 +55,13 @@ namespace BidCalculationTool_API.SeleniumTest
             var specialFeeResult = _fixture.driver.FindElement(By.Id("specialFeeResult"));
             var associationFeeResult = _fixture.driver.FindElement(By.Id("associationFeeResult"));
             var storageFeeResult = _fixture.driver.FindElement(By.Id("storageFeeResult"));
-            var TotalPriceResult = _fixture.driver.FindElement(By.Id("TotalPriceResult"));
+            var totalPriceResult = _fixture.driver.FindElement(By.Id("totalPriceResult"));
             Assert.Contains(basePrice, basePriceResult.Text);
             Assert.Contains(basicFee, basicFeeResult.Text);
             Assert.Contains(specialFee, specialFeeResult.Text);
             Assert.Contains(associationFee, associationFeeResult.Text);
             Assert.Contains(storageFee, storageFeeResult.Text);
-            Assert.Contains(totalPrice, TotalPriceResult.Text);
+            Assert.Contains(totalPrice, totalPriceResult.Text);
         }
 
         [Fact]

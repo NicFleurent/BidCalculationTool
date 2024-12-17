@@ -25,7 +25,7 @@ import "bootstrap"
     <div v-else-if="error" id="errorResult" class="text-danger">Error: {{ error }}</div>
     <div v-else-if="bid" class="mt-5 fs-5">
       <div id="basePriceResult" class="d-flex w-100 justify-content-between">
-        <div>Base Price :</div>
+        <div>Base price :</div>
         <div>{{Number(bid.basePrice).toFixed(2)}}$</div>
       </div>
 
@@ -36,7 +36,7 @@ import "bootstrap"
           <div>{{Number(bid.basicFee).toFixed(2)}}$</div>
         </div>
         <div id="specialFeeResult" class="d-flex w-100 justify-content-between">
-          <div>Special:</div>
+          <div>Special :</div>
           <div>{{Number(bid.specialFee).toFixed(2)}}$</div>
         </div>
         <div id="associationFeeResult" class="d-flex w-100 justify-content-between">
@@ -49,8 +49,8 @@ import "bootstrap"
         </div>
       </div>
       
-      <div id="TotalPriceResult" class="d-flex w-100 justify-content-between mt-3">
-        <div>Total Price :</div>
+      <div id="totalPriceResult" class="d-flex w-100 justify-content-between mt-3">
+        <div>Total price :</div>
         <div>{{Number(bid.totalPrice).toFixed(2)}}$</div>
       </div>
     </div>

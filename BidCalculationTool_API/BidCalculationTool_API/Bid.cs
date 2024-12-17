@@ -20,6 +20,12 @@ namespace BidCalculationTool_API
             setBasePrice(_basePrice);
         }
 
+        /* To respect the OCP principle, I feel like I should make the methods
+         * below abstract and define them in the children classes. That code for
+         * the both of them would be identical and I assume that they would be pretty
+         * similar I we added a new type of bid. For that reason, I prefered not to
+         * copy paste code and leave it here.
+         */
         public void setBasePrice(double _basePrice)
         {
             if(_basePrice < 1)
