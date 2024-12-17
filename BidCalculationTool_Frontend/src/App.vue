@@ -22,34 +22,34 @@ import "bootstrap"
     </div>
 
     <div v-if="isLoading">Loading...</div>
-    <div v-else-if="error" class="text-danger">Error: {{ error }}</div>
+    <div v-else-if="error" id="errorResult" class="text-danger">Error: {{ error }}</div>
     <div v-else-if="bid" class="mt-5 fs-5">
-      <div class="d-flex w-100 justify-content-between">
+      <div id="basePriceResult" class="d-flex w-100 justify-content-between">
         <div>Base Price :</div>
         <div>{{Number(bid.basePrice).toFixed(2)}}$</div>
       </div>
 
       <div class="mt-2 fw-bold">Fees</div>
       <div class="ms-3">
-        <div class="d-flex w-100 justify-content-between">
+        <div id="basicFeeResult" class="d-flex w-100 justify-content-between">
           <div>Basic :</div>
           <div>{{Number(bid.basicFee).toFixed(2)}}$</div>
         </div>
-        <div class="d-flex w-100 justify-content-between">
+        <div id="specialFeeResult" class="d-flex w-100 justify-content-between">
           <div>Special:</div>
           <div>{{Number(bid.specialFee).toFixed(2)}}$</div>
         </div>
-        <div class="d-flex w-100 justify-content-between">
+        <div id="associationFeeResult" class="d-flex w-100 justify-content-between">
           <div>Association :</div>
           <div>{{Number(bid.associationFee).toFixed(2)}}$</div>
         </div>
-        <div class="d-flex w-100 justify-content-between">
+        <div id="storageFeeResult" class="d-flex w-100 justify-content-between">
           <div>Storage :</div>
           <div>{{Number(bid.storageFee).toFixed(2)}}$</div>
         </div>
       </div>
       
-      <div class="d-flex w-100 justify-content-between mt-3">
+      <div id="TotalPriceResult" class="d-flex w-100 justify-content-between mt-3">
         <div>Total Price :</div>
         <div>{{Number(bid.totalPrice).toFixed(2)}}$</div>
       </div>
