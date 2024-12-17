@@ -30,7 +30,7 @@ namespace BidCalculationTool_API.Controllers
             }
             else
             {
-                return BadRequest("The type of the bid must be Common or Luxury");
+                return BadRequest(ModelState);
             }
 
             BidModel response = bid.getBidModel();
