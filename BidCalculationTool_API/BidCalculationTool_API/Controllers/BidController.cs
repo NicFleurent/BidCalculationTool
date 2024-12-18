@@ -16,7 +16,12 @@ namespace BidCalculationTool_API.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                var errors = ModelState.Values
+                                        .SelectMany(v => v.Errors)
+                                        .Select(e => e.ErrorMessage)
+                                        .ToList();
+
+                return BadRequest(new { Errors = errors });
             }
 
             Bid bid;
@@ -30,7 +35,7 @@ namespace BidCalculationTool_API.Controllers
             }
             else
             {
-                return BadRequest(ModelState);
+                return BadRequest(new { Errors = new[] { "Invalid bid type." } });
             }
 
             BidModel response = bid.getBidModel();

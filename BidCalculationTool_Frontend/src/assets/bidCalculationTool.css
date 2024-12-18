@@ -1,0 +1,11 @@
+body, #app{
+  height: 100vh;
+}
+
+body {
+  background-image: linear-gradient(45deg, rgb(111, 24, 177), darkblue);
+}
+
+.bg-lighBlue{
+  background-color: lightblue;
+}
